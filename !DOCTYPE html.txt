@@ -1,39 +1,35 @@
+
 <!DOCTYPE html>
 <html>
 
 <head>
 <title>Matside Management</title>
-
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-/* General Styles */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 0;
     padding: 0;
-    background-color: #0b1e4a; /* Dark blue background */
-    color: #ffffff; /* White text */
+    background-color: #0b1e4a;
+    color: #ffffff;
 }
 
-/* Header */
 h1 {
     font-size: 36px;
     padding: 40px 20px 10px 20px;
     margin: 0;
-    color: #ffa500; /* Orange accent for header */
+    color: #ffa500;
 }
 
-/* Subtext */
 p {
     margin: 10px 20px 20px 20px;
     font-size: 18px;
 }
 
-/* Boxes */
 .box {
-    background: #112b5c; /* Slightly lighter dark blue */
+    background: #112b5c;
     padding: 30px;
     margin: 20px auto;
     max-width: 600px;
@@ -41,7 +37,6 @@ p {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Buttons */
 .button {
     display: block;
     margin: 20px auto;
@@ -49,8 +44,8 @@ p {
     font-size: 20px;
     width: 80%;
     max-width: 400px;
-    background: #ffa500; /* Orange button */
-    color: #0b1e4a; /* Dark blue text */
+    background: #ffa500;
+    color: #0b1e4a;
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
@@ -58,16 +53,14 @@ p {
 }
 
 .button:hover {
-    background: #ffb733; /* Slightly lighter orange on hover */
+    background: #ffb733;
 }
 
-/* Section Titles */
 h2 {
     margin-top: 0;
-    color: #ffa500; /* Orange section headers */
+    color: #ffa500;
 }
 
-/* Footer */
 .footer {
     margin-top: 40px;
     font-size: 14px;
@@ -85,13 +78,17 @@ h2 {
 <div class="box">
     <h2>Event Management Request</h2>
     <p>Request tournament management services.</p>
-    <a class="button" href="https://forms.gle/ihUjrpX7shKaFeBG8" target="_blank">Open Event Management Form</a>
+    <a class="button" href="https://forms.gle/ihUjrpX7shKaFeBG8" target="_blank">
+    Open Event Management Form
+    </a>
 </div>
 
 <div class="box">
     <h2>Digital Score Display Rentals & Sales</h2>
     <p>Request information about scoreboard rentals or purchase.</p>
-    <a class="button" href="https://forms.gle/w36vannM9GXa7bqd9" target="_blank">Open Scoreboard Rental & Sales Form</a>
+    <a class="button" href="https://forms.gle/w36vannM9GXa7bqd9" target="_blank">
+    Open Scoreboard Rental & Sales Form
+    </a>
 </div>
 
 <div class="footer">Matside Management</div>
