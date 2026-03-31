@@ -15,135 +15,73 @@ body {
     line-height: 1.6;
 }
 
-h1, h2, h3 {
-    margin: 0 0 15px;
-}
-
-.section {
-    padding: 60px 20px;
-    max-width: 1100px;
-    margin: auto;
-}
+h1, h2, h3 { margin: 0 0 15px; }
+.section { padding: 60px 20px; max-width: 1100px; margin: auto; }
 
 /* NAV */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #0b1e4a;
-    padding: 15px 30px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    display: flex; justify-content: space-between; align-items: center;
+    background: #0b1e4a; padding: 15px 30px;
+    position: sticky; top: 0; z-index: 100;
 }
-
-.navbar a {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
-    font-weight: bold;
-}
-
-.navbar a:hover {
-    color: #ff7a00;
-}
+.navbar a { color: white; text-decoration: none; margin-left: 20px; font-weight: bold; }
+.navbar a:hover { color: #ff7a00; }
 
 /* HERO */
-.hero {
-    text-align: center;
-    padding: 80px 20px 50px;
-}
-
-.hero img {
-    max-width: 420px;
-    width: 90%;
-}
-
-.hero p {
-    margin-top: 15px;
-    font-size: 18px;
-    color: #ccc;
-}
+.hero { text-align: center; padding: 80px 20px 50px; }
+.hero img { max-width: 420px; width: 90%; }
+.hero p { margin-top: 15px; font-size: 18px; color: #ccc; }
 
 /* CARDS */
 .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;
 }
-
 .card {
-    background: #10285c;
-    padding: 30px;
-    border-radius: 12px;
+    background: #10285c; padding: 30px; border-radius: 12px;
     box-shadow: 0px 6px 20px rgba(0,0,0,.4);
 }
 
 /* BUTTON */
 .button {
-    display: inline-block;
-    padding: 14px 24px;
-    background: #ff7a00;
-    color: #0b1e4a;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-    margin-top: 15px;
-    transition: 0.2s;
+    display: inline-block; padding: 14px 24px; background: #ff7a00;
+    color: #0b1e4a; text-decoration: none; border-radius: 6px; font-weight: bold;
+    margin-top: 15px; transition: 0.2s;
 }
-
-.button:hover {
-    background: #ffa347;
-}
+.button:hover { background: #ffa347; }
 
 /* STATS */
-.stats {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    margin-top: 40px;
-}
+.stats { display: flex; justify-content: space-around; text-align: center; margin-top: 40px; }
+.stat h3 { color: #ff7a00; font-size: 28px; }
 
-.stat h3 {
-    color: #ff7a00;
-    font-size: 28px;
-}
-
-/* GALLERY */
-.gallery {
+/* GALLERY GRID */
+.gallery-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;
     margin-top: 20px;
 }
-
-.gallery iframe {
-    width: 100%;
-    height: 420px;
-    border: none;
-    border-radius: 10px;
+.gallery-grid img {
+    width: 100%; border-radius: 8px; box-shadow: 0px 4px 12px rgba(0,0,0,.4);
+    cursor: pointer; transition: transform 0.2s;
 }
+.gallery-grid img:hover { transform: scale(1.03); }
+
+/* LIGHTBOX */
+#lightbox {
+    display: none; position: fixed; top:0; left:0; width:100%; height:100%;
+    background: rgba(0,0,0,0.9); justify-content: center; align-items: center;
+    z-index: 200;
+}
+#lightbox img { max-width: 90%; max-height: 90%; border-radius: 10px; }
+#lightbox:target { display: flex; }
 
 /* CONTACT */
-.contact-box {
-    background: #10285c;
-    padding: 30px;
-    border-radius: 12px;
-    text-align: center;
-}
-
-.contact-box p {
-    margin: 10px 0;
-}
+.contact-box { background: #10285c; padding: 30px; border-radius: 12px; text-align: center; }
+.contact-box p { margin: 10px 0; }
 
 /* FOOTER */
-.footer {
-    text-align: center;
-    padding: 40px 20px;
-    color: #aaa;
-    font-size: 14px;
-}
+.footer { text-align: center; padding: 40px 20px; color: #aaa; font-size: 14px; }
 
 </style>
 </head>
-
 <body>
 
 <!-- NAV -->
@@ -166,11 +104,8 @@ h1, h2, h3 {
 
 <!-- SERVICES -->
 <div class="section" id="services">
-
     <h2 style="color:#ff7a00;">What We Do</h2>
-
     <div class="grid">
-
         <div class="card">
             <h3>Event Operations</h3>
             <p>We handle the full tournament workflow—brackets, scoring systems, networking, and live on-site support. You run the event, we run the operation.</p>
@@ -178,7 +113,6 @@ h1, h2, h3 {
                 Request Event Support
             </a>
         </div>
-
         <div class="card">
             <h3>Digital Score Displays</h3>
             <p>High-visibility display systems built for fast deployment, reliability, and clean venue presentation. Available for rental or purchase.</p>
@@ -186,25 +120,13 @@ h1, h2, h3 {
                 Rentals & Sales Inquiry
             </a>
         </div>
-
     </div>
 
-    <!-- CREDIBILITY -->
     <div class="stats">
-        <div class="stat">
-            <h3>100+</h3>
-            <p>Events Supported</p>
-        </div>
-        <div class="stat">
-            <h3>10,000+</h3>
-            <p>Matches Managed</p>
-        </div>
-        <div class="stat">
-            <h3>0</h3>
-            <p>Operational Failures</p>
-        </div>
+        <div class="stat"><h3>100+</h3><p>Events Supported</p></div>
+        <div class="stat"><h3>10,000+</h3><p>Matches Managed</p></div>
+        <div class="stat"><h3>0</h3><p>Operational Failures</p></div>
     </div>
-
 </div>
 
 <!-- EVENTS GALLERY -->
@@ -212,9 +134,11 @@ h1, h2, h3 {
     <h2 style="color:#ff7a00;">Past Events</h2>
     <p>Full-scale tournament setups, multi-mat operations, and live scoring environments.</p>
 
-    <div class="gallery">
-        <!-- REPLACE THIS LINK -->
-        <iframe src="https://photos.app.goo.gl/yWbM8JchtpJ8BA716"></iframe>
+    <div class="gallery-grid" id="events-gallery">
+        <!-- Add image once: data-large is the lightbox version -->
+        <img src="https://drive.google.com/uc?export=view&id=FILE_ID_1" data-large="https://drive.google.com/uc?export=view&id=1gNDkfkftk7ledKWVlAlprXHLi5JE1N7l" alt="Event 1">
+        <img src="https://drive.google.com/uc?export=view&id=FILE_ID_2" data-large="https://drive.google.com/uc?export=view&id=FILE_ID_2" alt="Event 2">
+        <img src="https://drive.google.com/uc?export=view&id=FILE_ID_3" data-large="https://drive.google.com/uc?export=view&id=FILE_ID_3" alt="Event 3">
     </div>
 </div>
 
@@ -223,29 +147,49 @@ h1, h2, h3 {
     <h2 style="color:#ff7a00;">Equipment</h2>
     <p>Digital displays, scoring tables, and transport-ready systems.</p>
 
-    <div class="gallery">
-        <!-- REPLACE THIS LINK -->
-        <iframe src="https://photos.app.goo.gl/bqVWd8TNxwSKbHXY9"></iframe>
+    <div class="gallery-grid" id="equipment-gallery">
+        <img src="https://drive.google.com/uc?export=view&id=FILE_ID_4" data-large="https://drive.google.com/uc?export=view&id=FILE_ID_4" alt="Equipment 1">
+        <img src="https://drive.google.com/uc?export=view&id=FILE_ID_5" data-large="https://drive.google.com/uc?export=view&id=FILE_ID_5" alt="Equipment 2">
+        <img src="https://drive.google.com/uc?export=view&id=FILE_ID_6" data-large="https://drive.google.com/uc?export=view&id=FILE_ID_6" alt="Equipment 3">
     </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox">
+    <img src="" alt="Preview">
 </div>
 
 <!-- CONTACT -->
 <div class="section" id="contact">
-
     <h2 style="color:#ff7a00;">Contact</h2>
-
     <div class="contact-box">
         <p><strong>Email:</strong> matsidemanagement@gmail.com</p>
         <p><strong>Phone:</strong> (814) 483-8259</p>
         <p>Event inquiries are typically responded to within 24 hours.</p>
     </div>
-
 </div>
 
 <!-- FOOTER -->
 <div class="footer">
     Matside Management | Wrestling Tournament Operations & Digital Display Systems
 </div>
+
+<script>
+// Lightbox functionality
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = lightbox.querySelector('img');
+
+document.querySelectorAll('.gallery-grid img').forEach(img => {
+    img.addEventListener('click', () => {
+        lightboxImg.src = img.dataset.large;
+        lightbox.style.display = 'flex';
+    });
+});
+
+lightbox.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+});
+</script>
 
 </body>
 </html>
