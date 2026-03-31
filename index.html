@@ -22,6 +22,7 @@ h1, h2, h3 { margin: 0 0 15px; }
 /* NAVBAR */
 .navbar {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     background: #0b1e4a;
     padding: 15px 30px;
@@ -30,17 +31,20 @@ h1, h2, h3 { margin: 0 0 15px; }
     z-index: 100;
 }
 
-/* Logo on left */
-.navbar > div:first-child {
+/* Logo left */
+.navbar > .logo {
     font-weight: bold;
     color: white;
+    flex: 1;
 }
 
-/* Center nav links */
+/* Center links */
 .navbar .nav-links {
     display: flex;
+    flex: 2;
+    justify-content: center;
     gap: 20px;
-    margin: 0 auto;
+    flex-wrap: wrap;
 }
 .navbar .nav-links a { 
     color: white; 
@@ -50,7 +54,12 @@ h1, h2, h3 { margin: 0 0 15px; }
 }
 .navbar .nav-links a:hover { color: #ff7a00; }
 
-/* Social icon on right */
+/* Social icon right */
+.navbar .social {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
 .navbar .social a {
     color: white;
     font-size: 20px;
@@ -58,6 +67,14 @@ h1, h2, h3 { margin: 0 0 15px; }
     transition: 0.2s;
 }
 .navbar .social a:hover { color: #1877F2; }
+
+/* HAMBURGER BUTTON */
+.navbar .hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
 
 /* HERO */
 .hero { text-align: center; padding: 80px 20px 50px; }
@@ -96,7 +113,7 @@ h1, h2, h3 { margin: 0 0 15px; }
 .button:hover { background: #ffa347; }
 
 /* STATS */
-.stats { display: flex; justify-content: space-around; text-align: center; margin-top: 40px; }
+.stats { display: flex; justify-content: space-around; text-align: center; margin-top: 40px; flex-wrap: wrap; }
 .stat h3 { color: #ff7a00; font-size: 28px; }
 
 /* GALLERY GRID */
@@ -116,13 +133,41 @@ h1, h2, h3 { margin: 0 0 15px; }
 .footer { text-align: center; padding: 40px 20px; color: #aaa; font-size: 14px; }
 .footer a { color: #1877F2; text-decoration:none; font-weight:bold; }
 .footer a:hover { text-decoration: underline; }
+
+/* MOBILE RESPONSIVE */
+@media(max-width: 768px) {
+    .navbar .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 10px;
+    }
+    .navbar .nav-links a {
+        padding: 10px 0;
+    }
+    .navbar .hamburger {
+        display: block;
+    }
+}
 </style>
+
+<script>
+function toggleMenu() {
+    const links = document.querySelector('.nav-links');
+    links.style.display = links.style.display === 'flex' ? 'none' : 'flex';
+}
+</script>
+
 </head>
 <body>
 
 <!-- NAVBAR -->
 <div class="navbar">
-    <div>Matside Management</div>
+    <div class="logo">Matside Management</div>
+    <div class="hamburger" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+    </div>
     <div class="nav-links">
         <a href="#">Home</a>
         <a href="#services">Services</a>
