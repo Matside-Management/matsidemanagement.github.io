@@ -49,7 +49,7 @@ h1, h2, h3 { margin: 0 0 15px; }
 .button:hover { background: #ffa347; }
 
 /* STATS */
-.stats { display: flex; justify-content: space-around; text-align: center; margin-top: 40px; flex-wrap: wrap; }
+.stats { display: flex; justify-content: space-around; text-align: center; margin-top: 40px; }
 .stat h3 { color: #ff7a00; font-size: 28px; }
 
 /* GALLERY GRID */
@@ -59,21 +59,7 @@ h1, h2, h3 { margin: 0 0 15px; }
 }
 .gallery-grid img {
     width: 100%; border-radius: 8px; box-shadow: 0px 4px 12px rgba(0,0,0,.4);
-    cursor: pointer; transition: transform 0.2s;
 }
-.gallery-grid img:hover { transform: scale(1.03); }
-
-/* LIGHTBOX */
-#lightbox {
-    display: none; 
-    position: fixed; 
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0,0,0,0.9); 
-    justify-content: center; 
-    align-items: center;
-    z-index: 200;
-}
-#lightbox img { max-width: 90%; max-height: 90%; border-radius: 10px; }
 
 /* CONTACT */
 .contact-box { background: #10285c; padding: 30px; border-radius: 12px; text-align: center; }
@@ -147,14 +133,9 @@ h1, h2, h3 { margin: 0 0 15px; }
     <p>Digital displays, scoring tables, and transport-ready systems.</p>
 
     <div class="gallery-grid">
-        <img src="Equipment1.png" data-large="Equipment1.png" alt="Equipment 1">
-        <img src="Equipment2.png" data-large="Equipment2.png" alt="Equipment 2">
+        <img src="Equipment1.png" alt="Equipment1">
+        <img src="Equipment2.PNG" alt="Equipment2">
     </div>
-</div>
-
-<!-- LIGHTBOX -->
-<div id="lightbox">
-    <img src="" alt="Preview">
 </div>
 
 <!-- CONTACT -->
@@ -171,23 +152,6 @@ h1, h2, h3 { margin: 0 0 15px; }
 <div class="footer">
     Matside Management | Wrestling Tournament Operations & Digital Display Systems
 </div>
-
-<script>
-// Lightbox functionality
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = lightbox.querySelector('img');
-
-document.querySelectorAll('.gallery-grid img').forEach(img => {
-    img.addEventListener('click', () => {
-        lightboxImg.src = img.dataset.large;
-        lightbox.style.display = 'flex';
-    });
-});
-
-lightbox.addEventListener('click', () => {
-    lightbox.style.display = 'none';
-});
-</script>
 
 </body>
 </html>
