@@ -52,7 +52,7 @@ h1, h2, h3 { margin: 0 0 15px; }
     font-weight: bold; 
     transition: 0.2s;
 }
-.navbar .nav-links a:hover { color: #ff7a00; }
+.navbar .nav-links a:hover { color: #0b1e4a; }
 
 /* Social icon right */
 .navbar .social {
@@ -78,7 +78,11 @@ h1, h2, h3 { margin: 0 0 15px; }
 
 /* HERO */
 .hero { text-align: center; padding: 80px 20px 50px; }
-.hero img { max-width: 420px; width: 90%; }
+.hero img { 
+    width: 320px; 
+    height: 320px; 
+    object-fit: contain; 
+}
 .hero p { margin-top: 15px; font-size: 18px; color: #ccc; }
 
 /* FACEBOOK CTA */
@@ -122,7 +126,11 @@ h1, h2, h3 { margin: 0 0 15px; }
     margin-top: 20px;
 }
 .gallery-grid img {
-    width: 100%; border-radius: 8px; box-shadow: 0px 4px 12px rgba(0,0,0,.4);
+    width: 100%; 
+    height: 250px; 
+    object-fit: cover; 
+    border-radius: 8px; 
+    box-shadow: 0px 4px 12px rgba(0,0,0,.4);
 }
 
 /* CONTACT */
@@ -227,15 +235,13 @@ function toggleMenu() {
     <p>Full-scale tournament setups, multi-mat operations, and live scoring environments.</p>
 
     <div class="gallery-grid">
-
-          <img src="PE1.jpg" alt="PE1">
+        <img src="PE1.HEIC" alt="PE1">
         <img src="PE2.HEIC" alt="PE2">
         <img src="PE3.HEIC" alt="PE3">
         <img src="PE4.HEIC" alt="PE4">
         <img src="PE5.JPG" alt="PE5">
         <img src="PE6.HEIC" alt="PE6">
         <img src="PE7.JPG" alt="PE7">
-        
     </div>
 </div>
 
