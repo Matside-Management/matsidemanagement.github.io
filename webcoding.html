@@ -49,7 +49,7 @@ h1, h2, h3 { margin: 0 0 15px; }
 .button:hover { background: #ffa347; }
 
 /* STATS */
-.stats { display: flex; justify-content: space-around; text-align: center; margin-top: 40px; }
+.stats { display: flex; justify-content: space-around; text-align: center; margin-top: 40px; flex-wrap: wrap; }
 .stat h3 { color: #ff7a00; font-size: 28px; }
 
 /* GALLERY GRID */
@@ -65,12 +65,15 @@ h1, h2, h3 { margin: 0 0 15px; }
 
 /* LIGHTBOX */
 #lightbox {
-    display: none; position: fixed; top:0; left:0; width:100%; height:100%;
-    background: rgba(0,0,0,0.9); justify-content: center; align-items: center;
+    display: none; 
+    position: fixed; 
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.9); 
+    justify-content: center; 
+    align-items: center;
     z-index: 200;
 }
 #lightbox img { max-width: 90%; max-height: 90%; border-radius: 10px; }
-#lightbox:target { display: flex; }
 
 /* CONTACT */
 .contact-box { background: #10285c; padding: 30px; border-radius: 12px; text-align: center; }
@@ -134,7 +137,7 @@ h1, h2, h3 { margin: 0 0 15px; }
     <p>Full-scale tournament setups, multi-mat operations, and live scoring environments.</p>
 
     <div class="gallery-grid">
-       
+        <!-- Add past event images here later -->
     </div>
 </div>
 
@@ -144,8 +147,8 @@ h1, h2, h3 { margin: 0 0 15px; }
     <p>Digital displays, scoring tables, and transport-ready systems.</p>
 
     <div class="gallery-grid">
-    <img src="Equipment1.png" data-large="Equipment1.png" alt="Equipment1">
-    <img src="Equipment2.PNG" data-large="Equipment2.PNG" alt="Equipment2">
+        <img src="Equipment1.png" data-large="Equipment1.png" alt="Equipment 1">
+        <img src="Equipment2.png" data-large="Equipment2.png" alt="Equipment 2">
     </div>
 </div>
 
