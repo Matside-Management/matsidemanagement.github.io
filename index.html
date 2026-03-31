@@ -4,8 +4,10 @@
 <title>Matside Management</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<style>
+<!-- Load Font Awesome for social icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+<style>
 /* GLOBAL */
 body {
     margin: 0;
@@ -26,10 +28,36 @@ h1, h2, h3 { margin: 0 0 15px; }
 .navbar a { color: white; text-decoration: none; margin-left: 20px; font-weight: bold; }
 .navbar a:hover { color: #ff7a00; }
 
+/* SOCIAL ICONS IN NAV */
+.navbar .social {
+    display: flex; align-items: center;
+}
+.navbar .social a {
+    margin-left: 15px;
+    color: white;
+    font-size: 20px;
+    transition: 0.2s;
+}
+.navbar .social a:hover { color: #1877F2; }
+
 /* HERO */
 .hero { text-align: center; padding: 80px 20px 50px; }
 .hero img { max-width: 420px; width: 90%; }
 .hero p { margin-top: 15px; font-size: 18px; color: #ccc; }
+
+/* FACEBOOK CTA */
+.facebook-cta {
+    text-align: center; 
+    margin: 30px 0; 
+}
+.facebook-cta p { 
+    font-size: 18px; color: #ff7a00; font-weight: bold; margin-bottom:10px;
+}
+.facebook-cta a {
+    display:inline-block; padding:12px 20px; background:#1877F2; color:white;
+    border-radius:6px; text-decoration:none; font-weight:bold; transition:0.2s;
+}
+.facebook-cta a:hover { background:#145dbf; }
 
 /* CARDS */
 .grid {
@@ -67,6 +95,8 @@ h1, h2, h3 { margin: 0 0 15px; }
 
 /* FOOTER */
 .footer { text-align: center; padding: 40px 20px; color: #aaa; font-size: 14px; }
+.footer a { color: #1877F2; text-decoration:none; font-weight:bold; }
+.footer a:hover { text-decoration: underline; }
 
 </style>
 </head>
@@ -82,6 +112,11 @@ h1, h2, h3 { margin: 0 0 15px; }
         <a href="#equipment">Equipment</a>
         <a href="#contact">Contact</a>
     </div>
+    <div class="social">
+        <a href="https://www.facebook.com/profile.php?id=61561997815902" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+    </div>
 </div>
 
 <!-- HERO -->
@@ -90,13 +125,19 @@ h1, h2, h3 { margin: 0 0 15px; }
     <p>Full-Service Wrestling Tournament Operations, Scoring Systems, and Digital Display Solutions</p>
 </div>
 
+<!-- FACEBOOK CTA -->
+<div class="facebook-cta">
+    <p>Stay up-to-date on the latest events and news!</p>
+    <a href="https://www.facebook.com/profile.php?id=61561997815902" target="_blank">Follow Us on Facebook</a>
+</div>
+
 <!-- SERVICES -->
 <div class="section" id="services">
     <h2 style="color:#ff7a00;">What We Do</h2>
     <div class="grid">
         <div class="card">
             <h3>Event Operations</h3>
-            <p>We handle the full tournament workflow—registration, brackets, scoring systems, networking, and live on-site support. </p>
+            <p>We handle the full tournament workflow—brackets, scoring systems, networking, and live on-site support. You run the event, we run the operation.</p>
             <a class="button" href="https://forms.gle/ihUjrpX7shKaFeBG8" target="_blank">
                 Request Event Support
             </a>
@@ -123,10 +164,7 @@ h1, h2, h3 { margin: 0 0 15px; }
     <p>Full-scale tournament setups, multi-mat operations, and live scoring environments.</p>
 
     <div class="gallery-grid">
-         <img src="PE1.HEIC" alt="PE1">
-        <img src="PE2.JPG" alt="PE2">
-        <img src="PE3.JPG" alt="PE3"> 
-        <img src="PE4.png" alt="PE4">
+        <!-- Add images here when ready -->
     </div>
 </div>
 
@@ -153,7 +191,8 @@ h1, h2, h3 { margin: 0 0 15px; }
 
 <!-- FOOTER -->
 <div class="footer">
-    Matside Management | Wrestling Tournament Operations & Digital Display Systems
+    Matside Management | Wrestling Tournament Operations & Digital Display Systems<br>
+    <a href="https://www.facebook.com/profile.php?id=61561997815902" target="_blank">Follow us on Facebook for updates!</a>
 </div>
 
 </body>
