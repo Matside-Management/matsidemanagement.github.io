@@ -168,6 +168,37 @@ h2 {
     transform: translateY(-2px);
 }
 
+.gallery-section h2 {
+    margin-bottom: 10px;
+}
+
+.gallery-subtitle {
+    max-width: 760px;
+    margin: 0 auto 24px;
+    color: #d0d7e8;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 14px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.28);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 4 / 3;
+}
+
 .footer {
     margin-top: 80px;
     padding-bottom: 40px;
@@ -206,6 +237,7 @@ h2 {
     <div class="nav-links">
         <a href="#">Home</a>
         <a href="#services">Request Services</a>
+        <a href="#gallery">Gallery</a>
     </div>
     <div class="social">
         <a href="https://www.facebook.com/profile.php?id=61561997815902" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
@@ -245,6 +277,22 @@ h2 {
                 Equipment Rental Form
             </a>
         </div>
+    </div>
+</div>
+
+<div class="section gallery-section" id="gallery">
+    <h2>Event Gallery</h2>
+    <p class="gallery-subtitle">A snapshot of recent events and equipment in action.</p>
+    <div class="gallery-grid">
+        <div class="gallery-item"><img src="PE1.jpg" alt="Wrestling event photo 1"></div>
+        <div class="gallery-item"><img src="PE2.HEIC" alt="Wrestling event photo 2"></div>
+        <div class="gallery-item"><img src="PE3.HEIC" alt="Wrestling event photo 3"></div>
+        <div class="gallery-item"><img src="PE4.HEIC" alt="Wrestling event photo 4"></div>
+        <div class="gallery-item"><img src="PE5.JPG" alt="Wrestling event photo 5"></div>
+        <div class="gallery-item"><img src="PE6.HEIC" alt="Wrestling event photo 6"></div>
+        <div class="gallery-item"><img src="PE7.JPG" alt="Wrestling event photo 7"></div>
+        <div class="gallery-item"><img src="Equipment1.png" alt="Scoreboard equipment photo 1"></div>
+        <div class="gallery-item"><img src="Equipment2.PNG" alt="Scoreboard equipment photo 2"></div>
     </div>
 </div>
 
