@@ -3,7 +3,6 @@
 <head>
 <title>Matside Management</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
 /* GLOBAL */
 body {
@@ -68,7 +67,12 @@ body {
 
 .social a {
     color: white;
-    font-size: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 999px;
+    padding: 6px 12px;
 }
 
 /* HERO */
@@ -122,8 +126,16 @@ body {
 }
 
 .service-box-header i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: rgba(255, 122, 0, 0.18);
     font-size: 20px;
     color: #ff7a00;
+    font-style: normal;
 }
 
 h2 {
@@ -251,7 +263,7 @@ h2 {
     </div>
     <div class="social">
         <a href="https://www.facebook.com/profile.php?id=61561997815902" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-            <i class="fab fa-facebook-f"></i>
+            Facebook
         </a>
     </div>
 </div>
@@ -270,7 +282,7 @@ h2 {
     <div class="service-grid">
         <div class="service-box">
             <div class="service-box-header">
-                <i class="fa-solid fa-clipboard-check" aria-hidden="true"></i>
+                <i aria-hidden="true">✓</i>
                 <h3>Event Management</h3>
             </div>
             <p>End-to-end tournament operations, bracket support, scorekeeping coordination, and on-site troubleshooting for wrestling events.</p>
@@ -281,7 +293,7 @@ h2 {
 
         <div class="service-box">
             <div class="service-box-header">
-                <i class="fa-solid fa-tv" aria-hidden="true"></i>
+                <i aria-hidden="true">▣</i>
                 <h3>Digital Score Displays</h3>
             </div>
             <p>High-visibility scoreboard rentals and sales with quick setup, transport-friendly design, and reliable tournament-day performance.</p>
