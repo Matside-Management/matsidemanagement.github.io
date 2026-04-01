@@ -3,22 +3,30 @@
 <head>
 <title>Matside Management</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 <style>
-
-/* GLOBAL */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #081633;
+    background: linear-gradient(180deg, #0b1e4a 0%, #081633 100%);
     color: white;
     line-height: 1.6;
+    text-align: center;
 }
-.section { padding: 60px 20px; max-width: 1100px; margin: auto; }
 
-/* NAVBAR */
+.section {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.orange-divider {
+    width: 120px;
+    height: 4px;
+    background: #ff7a00;
+    margin: 30px auto 0;
+    border-radius: 2px;
+}
+
 .navbar {
     display: flex;
     flex-wrap: wrap;
@@ -29,128 +37,219 @@ body {
     top: 0;
     z-index: 100;
 }
-.logo { flex: 1; font-weight: bold; }
-.nav-links { flex: 2; display: flex; justify-content: center; gap: 20px; }
-.nav-links a { color: white; text-decoration: none; font-weight: bold; }
-.social { flex: 1; display: flex; justify-content: flex-end; }
-.social a { color: white; font-size: 20px; }
 
-/* HERO */
-.hero { text-align: center; padding: 80px 20px 50px; }
-.hero img { max-width: 420px; width: 90%; }
-.hero p { color: #ccc; }
+.logo {
+    flex: 1;
+    font-weight: bold;
+    text-align: left;
+}
 
-/* GALLERY */
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+.nav-links {
+    flex: 2;
+    display: flex;
+    justify-content: center;
     gap: 20px;
 }
 
-.gallery-item {
-    overflow: hidden;
-    border-radius: 10px;
-    cursor: pointer;
-}
-.gallery-item img {
-    width: 100%;
-    transition: 0.3s;
-}
-.gallery-item:hover img {
-    transform: scale(1.05);
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-/* LIGHTBOX */
-.lightbox {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.95);
-    display: none;
-    justify-content: center;
+.social {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.social a {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 999px;
+    padding: 6px 12px;
+}
+
+.hero {
+    text-align: center;
+    padding: 70px 20px 40px;
+}
+
+.hero img {
+    width: 90%;
+    max-width: 520px;
+    height: auto;
+}
+
+.hero p {
+    color: #d0d7e8;
+    margin-top: 18px;
+}
+
+.services {
+    padding-top: 20px;
+}
+
+.services-intro {
+    max-width: 760px;
+    margin: 0 auto 26px;
+    color: #d0d7e8;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    text-align: left;
+}
+
+.service-box {
+    background: linear-gradient(180deg, #13316e 0%, #10285c 100%);
+    padding: 30px 28px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.service-box-header {
+    display: flex;
     align-items: center;
-    z-index: 999;
-}
-.lightbox img {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 10px;
+    gap: 12px;
+    margin-bottom: 10px;
 }
 
+.service-box-header i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: rgba(255, 122, 0, 0.18);
+    font-size: 20px;
+    color: #ff7a00;
+    font-style: normal;
+}
+
+h2 {
+    color: #ff7a00;
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.service-box h3 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.service-box p {
+    margin: 0;
+    color: #dce4f7;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 12px 18px;
+    font-size: 16px;
+    background: #ff7a00;
+    color: #0b1e4a;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.25s ease;
+}
+
+.button:hover {
+    background: #ffa347;
+    transform: translateY(-2px);
+}
+
+.footer {
+    margin-top: 80px;
+    padding-bottom: 40px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+@media (max-width: 600px) {
+    .service-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .service-box {
+        padding: 22px;
+    }
+
+    .navbar {
+        row-gap: 10px;
+    }
+
+    .logo,
+    .nav-links,
+    .social {
+        flex: 0 0 100%;
+        justify-content: center;
+        text-align: center;
+    }
+}
 </style>
 </head>
 
 <body>
-
-<!-- NAV -->
 <div class="navbar">
     <div class="logo">Matside Management</div>
     <div class="nav-links">
         <a href="#">Home</a>
-        <a href="#events">Events</a>
-        <a href="#equipment">Equipment</a>
+        <a href="#services">Request Services</a>
     </div>
     <div class="social">
-        <a href="https://www.facebook.com/profile.php?id=61561997815902" target="_blank">
-            <i class="fab fa-facebook-f"></i>
+        <a href="https://www.facebook.com/profile.php?id=61561997815902" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            Facebook
         </a>
     </div>
 </div>
 
-<!-- HERO -->
 <div class="hero">
-    <img src="logo.jpg">
-    <p>Full-Service Wrestling Tournament Operations & Digital Display Solutions</p>
+    <img src="logo.jpg" alt="Matside Management Logo">
+    <p>Full-Service Wrestling Tournament Operations &amp; Digital Display Solutions</p>
+    <div class="orange-divider"></div>
 </div>
 
-<!-- EVENTS -->
-<div class="section" id="events">
-    <h2>Past Events</h2>
+<div class="section services" id="services">
+    <h2>Request Services</h2>
+    <p class="services-intro">Choose the service you need below. We keep requests simple: one form for event operations, one form for equipment rentals.</p>
+    <div class="service-grid">
+        <div class="service-box">
+            <div class="service-box-header">
+                <i aria-hidden="true">✓</i>
+                <h3>Event Requests</h3>
+            </div>
+            <p>For tournament operations, scoring support, and on-site event management staffing.</p>
+            <a class="button" href="https://forms.gle/ihUjrpX7shKaFeBG8" target="_blank" rel="noopener noreferrer">
+                Event Request Form
+            </a>
+        </div>
 
-    <div class="gallery-grid">
-        <div class="gallery-item"><img src="PE1.jpg"></div>
-        <div class="gallery-item"><img src="PE2.HEIC"></div>
-        <div class="gallery-item"><img src="PE3.HEIC"></div>
-        <div class="gallery-item"><img src="PE4.HEIC"></div>
-        <div class="gallery-item"><img src="PE5.JPG"></div>
-        <div class="gallery-item"><img src="PE6.HEIC"></div>
-        <div class="gallery-item"><img src="PE7.JPG"></div>
+        <div class="service-box">
+            <div class="service-box-header">
+                <i aria-hidden="true">▣</i>
+                <h3>Equipment Rental</h3>
+            </div>
+            <p>For digital scoreboard rentals and equipment availability for your event.</p>
+            <a class="button" href="https://forms.gle/w36vannM9GXa7bqd9" target="_blank" rel="noopener noreferrer">
+                Equipment Rental Form
+            </a>
+        </div>
     </div>
 </div>
 
-<!-- EQUIPMENT -->
-<div class="section" id="equipment">
-    <h2>Equipment</h2>
-
-    <div class="gallery-grid">
-        <div class="gallery-item"><img src="Equipment1.png"></div>
-        <div class="gallery-item"><img src="Equipment2.PNG"></div>
-    </div>
+<div class="footer">
+    Matside Management | Tournament Operations &amp; Digital Display Solutions
 </div>
-
-<!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox">
-    <img id="lightbox-img">
-</div>
-
-<script>
-// Lightbox logic
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightbox-img');
-
-document.querySelectorAll('.gallery-item img').forEach(img => {
-    img.addEventListener('click', () => {
-        lightbox.style.display = 'flex';
-        lightboxImg.src = img.src;
-    });
-});
-
-// Close on click anywhere
-lightbox.addEventListener('click', () => {
-    lightbox.style.display = 'none';
-});
-</script>
-
 </body>
 </html>
