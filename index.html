@@ -68,6 +68,12 @@ body {
 
 .social a {
     color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 999px;
+    padding: 6px 12px;
     font-size: 20px;
 }
 
@@ -90,6 +96,48 @@ body {
 
 /* SERVICES */
 .services {
+    padding-top: 20px;
+}
+
+.services-intro {
+    max-width: 760px;
+    margin: 0 auto 26px;
+    color: #d0d7e8;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    text-align: left;
+}
+
+.service-box {
+    background: linear-gradient(180deg, #13316e 0%, #10285c 100%);
+    padding: 30px 28px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.service-box-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.service-box-header i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: rgba(255, 122, 0, 0.18);
+    font-size: 20px;
+    color: #ff7a00;
+    font-style: normal;
     padding-top: 10px;
 }
 
@@ -108,6 +156,22 @@ h2 {
     margin-bottom: 15px;
 }
 
+.service-box h3 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.service-box p {
+    margin: 0;
+    color: #dce4f7;
+}
+
+/* BUTTONS */
+.button {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 12px 18px;
+    font-size: 16px;
 /* BUTTONS */
 .button {
     display: inline-block;
@@ -181,6 +245,13 @@ h2 {
 }
 
 @media (max-width: 600px) {
+    .service-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .service-box {
+        padding: 22px;
     .box,
     .service-box {
         padding: 25px;
@@ -214,6 +285,7 @@ h2 {
     </div>
     <div class="social">
         <a href="https://www.facebook.com/profile.php?id=61561997815902" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            Facebook
             <i class="fab fa-facebook-f"></i>
         </a>
     </div>
@@ -228,6 +300,30 @@ h2 {
 
 <!-- SERVICES -->
 <div class="section services" id="services">
+    <h2>Services</h2>
+    <p class="services-intro">Reliable tournament staffing and digital display solutions built for smooth operations from first whistle to final match.</p>
+    <div class="service-grid">
+        <div class="service-box">
+            <div class="service-box-header">
+                <i aria-hidden="true">✓</i>
+                <h3>Event Management</h3>
+            </div>
+            <p>End-to-end tournament operations, bracket support, scorekeeping coordination, and on-site troubleshooting for wrestling events.</p>
+            <a class="button" href="https://forms.gle/ihUjrpX7shKaFeBG8" target="_blank" rel="noopener noreferrer">
+                Request Management
+            </a>
+        </div>
+
+        <div class="service-box">
+            <div class="service-box-header">
+                <i aria-hidden="true">▣</i>
+                <h3>Digital Score Displays</h3>
+            </div>
+            <p>High-visibility scoreboard rentals and sales with quick setup, transport-friendly design, and reliable tournament-day performance.</p>
+            <a class="button" href="https://forms.gle/w36vannM9GXa7bqd9" target="_blank" rel="noopener noreferrer">
+                Rentals &amp; Sales Inquiry
+            </a>
+        </div>
     <div class="service-box">
         <h2>Event Management Services</h2>
         <p>Professional tournament operations, scoring systems, and on-site support for wrestling events.</p>
