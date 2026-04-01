@@ -4,10 +4,10 @@
 <title>Matside Management</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- Load Font Awesome for social icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
+
 /* GLOBAL */
 body {
     margin: 0;
@@ -30,15 +30,8 @@ h1, h2, h3 { margin: 0 0 15px; }
     top: 0;
     z-index: 100;
 }
+.navbar > .logo { font-weight: bold; color: white; flex: 1; }
 
-/* Logo left */
-.navbar > .logo {
-    font-weight: bold;
-    color: white;
-    flex: 1;
-}
-
-/* Center links */
 .navbar .nav-links {
     display: flex;
     flex: 2;
@@ -46,15 +39,14 @@ h1, h2, h3 { margin: 0 0 15px; }
     gap: 20px;
     flex-wrap: wrap;
 }
-.navbar .nav-links a { 
-    color: white; 
-    text-decoration: none; 
-    font-weight: bold; 
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
     transition: 0.2s;
 }
 .navbar .nav-links a:hover { color: #0b1e4a; }
 
-/* Social icon right */
 .navbar .social {
     flex: 1;
     display: flex;
@@ -63,12 +55,9 @@ h1, h2, h3 { margin: 0 0 15px; }
 .navbar .social a {
     color: white;
     font-size: 20px;
-    margin-left: 15px;
-    transition: 0.2s;
 }
 .navbar .social a:hover { color: #1877F2; }
 
-/* HAMBURGER BUTTON */
 .navbar .hamburger {
     display: none;
     font-size: 24px;
@@ -83,58 +72,127 @@ h1, h2, h3 { margin: 0 0 15px; }
 
 /* FACEBOOK CTA */
 .facebook-cta {
-    text-align: center; 
-    margin: 30px 0; 
+    text-align: center;
+    margin: 30px 0;
 }
-.facebook-cta p { 
-    font-size: 18px; color: #ff7a00; font-weight: bold; margin-bottom:10px;
+.facebook-cta p {
+    font-size: 18px;
+    color: #ff7a00;
+    font-weight: bold;
 }
 .facebook-cta a {
-    display:inline-block; padding:12px 20px; background:#1877F2; color:white;
-    border-radius:6px; text-decoration:none; font-weight:bold; transition:0.2s;
+    display:inline-block;
+    padding:12px 20px;
+    background:#1877F2;
+    color:white;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:bold;
 }
 .facebook-cta a:hover { background:#145dbf; }
 
 /* CARDS */
 .grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
 }
 .card {
-    background: #10285c; padding: 30px; border-radius: 12px;
+    background: #10285c;
+    padding: 30px;
+    border-radius: 12px;
     box-shadow: 0px 6px 20px rgba(0,0,0,.4);
 }
 
 /* BUTTON */
 .button {
-    display: inline-block; padding: 14px 24px; background: #ff7a00;
-    color: #0b1e4a; text-decoration: none; border-radius: 6px; font-weight: bold;
-    margin-top: 15px; transition: 0.2s;
+    display: inline-block;
+    padding: 14px 24px;
+    background: #ff7a00;
+    color: #0b1e4a;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
 }
 .button:hover { background: #ffa347; }
 
 /* STATS */
-.stats { display: flex; justify-content: space-around; text-align: center; margin-top: 40px; flex-wrap: wrap; }
-.stat h3 { color: #ff7a00; font-size: 28px; }
-
-/* GALLERY GRID */
-.gallery-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;
-    margin-top: 20px;
+.stats {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 40px;
+    flex-wrap: wrap;
 }
-.gallery-grid img {
-    width: 100%; border-radius: 8px; box-shadow: 0px 4px 12px rgba(0,0,0,.4);
+.stat h3 {
+    color: #ff7a00;
+    font-size: 28px;
+}
+
+/* 🔥 UPGRADED GALLERY */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,.5);
+}
+
+.gallery-item img {
+    width: 100%;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+/* Hover zoom */
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+/* Overlay */
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(8, 22, 51, 0.6);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
 }
 
 /* CONTACT */
-.contact-box { background: #10285c; padding: 30px; border-radius: 12px; text-align: center; }
-.contact-box p { margin: 10px 0; }
+.contact-box {
+    background: #10285c;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+}
 
 /* FOOTER */
-.footer { text-align: center; padding: 40px 20px; color: #aaa; font-size: 14px; }
-.footer a { color: #1877F2; text-decoration:none; font-weight:bold; }
-.footer a:hover { text-decoration: underline; }
+.footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: #aaa;
+    font-size: 14px;
+}
+.footer a {
+    color: #1877F2;
+    text-decoration:none;
+    font-weight:bold;
+}
 
-/* MOBILE RESPONSIVE */
+/* MOBILE */
 @media(max-width: 768px) {
     .navbar .nav-links {
         display: none;
@@ -143,13 +201,10 @@ h1, h2, h3 { margin: 0 0 15px; }
         text-align: center;
         margin-top: 10px;
     }
-    .navbar .nav-links a {
-        padding: 10px 0;
-    }
-    .navbar .hamburger {
-        display: block;
-    }
+    .navbar .nav-links a { padding: 10px 0; }
+    .navbar .hamburger { display: block; }
 }
+
 </style>
 
 <script>
@@ -200,17 +255,11 @@ function toggleMenu() {
     <div class="grid">
         <div class="card">
             <h3>Event Operations</h3>
-            <p>We handle the full tournament workflow—brackets, scoring systems, networking, and live on-site support. You run the event, we run the operation.</p>
-            <a class="button" href="https://forms.gle/ihUjrpX7shKaFeBG8" target="_blank">
-                Request Event Support
-            </a>
+            <p>We handle the full tournament workflow—brackets, scoring systems, networking, and live on-site support.</p>
         </div>
         <div class="card">
             <h3>Digital Score Displays</h3>
-            <p>High-visibility display systems built for fast deployment, reliability, and clean venue presentation. Available for rental or purchase.</p>
-            <a class="button" href="https://forms.gle/w36vannM9GXa7bqd9" target="_blank">
-                Rentals & Sales Inquiry
-            </a>
+            <p>High-visibility display systems built for fast deployment and reliability.</p>
         </div>
     </div>
 
@@ -221,30 +270,28 @@ function toggleMenu() {
     </div>
 </div>
 
-<!-- EVENTS GALLERY -->
+<!-- EVENTS -->
 <div class="section" id="events">
     <h2 style="color:#ff7a00;">Past Events</h2>
-    <p>Full-scale tournament setups, multi-mat operations, and live scoring environments.</p>
 
     <div class="gallery-grid">
-        <img src="PE1.jpg" alt="PE1">
-        <img src="PE2.HEIC" alt="PE2">
-        <img src="PE3.HEIC" alt="PE3">
-        <img src="PE4.HEIC" alt="PE4">
-        <img src="PE5.JPG" alt="PE5">
-        <img src="PE6.HEIC" alt="PE6">
-        <img src="PE7.JPG" alt="PE7">
+        <div class="gallery-item"><img src="PE1.jpg"><div class="gallery-overlay"></div></div>
+        <div class="gallery-item"><img src="PE2.HEIC"><div class="gallery-overlay"></div></div>
+        <div class="gallery-item"><img src="PE3.HEIC"><div class="gallery-overlay"></div></div>
+        <div class="gallery-item"><img src="PE4.HEIC"><div class="gallery-overlay"></div></div>
+        <div class="gallery-item"><img src="PE5.JPG"><div class="gallery-overlay"></div></div>
+        <div class="gallery-item"><img src="PE6.HEIC"><div class="gallery-overlay"></div></div>
+        <div class="gallery-item"><img src="PE7.JPG"><div class="gallery-overlay"></div></div>
     </div>
 </div>
 
-<!-- EQUIPMENT GALLERY -->
+<!-- EQUIPMENT -->
 <div class="section" id="equipment">
     <h2 style="color:#ff7a00;">Equipment</h2>
-    <p>Digital displays, scoring tables, and transport-ready systems.</p>
 
     <div class="gallery-grid">
-        <img src="Equipment1.png" alt="Equipment1">
-        <img src="Equipment2.PNG" alt="Equipment2">
+        <div class="gallery-item"><img src="Equipment1.png"><div class="gallery-overlay"></div></div>
+        <div class="gallery-item"><img src="Equipment2.PNG"><div class="gallery-overlay"></div></div>
     </div>
 </div>
 
@@ -254,14 +301,13 @@ function toggleMenu() {
     <div class="contact-box">
         <p><strong>Email:</strong> matsidemanagement@gmail.com</p>
         <p><strong>Phone:</strong> (814) 483-8259</p>
-        <p>Event inquiries are typically responded to within 24 hours.</p>
     </div>
 </div>
 
 <!-- FOOTER -->
 <div class="footer">
     Matside Management | Wrestling Tournament Operations & Digital Display Systems<br>
-    <a href="https://www.facebook.com/profile.php?id=61561997815902" target="_blank">Follow us on Facebook for updates!</a>
+    <a href="https://www.facebook.com/profile.php?id=61561997815902" target="_blank">Follow us on Facebook</a>
 </div>
 
 </body>
